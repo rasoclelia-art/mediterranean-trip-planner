@@ -684,8 +684,8 @@ function getFakeWeatherForDay(day: DayItinerary, city: string): FakeWeather {
     <div
       className="app-root"
       style={{
-        backgroundImage: "linear-gradient(180deg, #f4d6b5, #fffcf5, #d9e9ff)",
-        backgroundSize: "cover",
+        
+        backgroundSize: "cover", backgroundImage: "linear-gradient(180deg, #F8FAFC, #EEF4FF, #EDE9FE)",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         backdropFilter: "blur(2px)",
@@ -696,19 +696,32 @@ function getFakeWeatherForDay(day: DayItinerary, city: string): FakeWeather {
 {step === 1 && (
   <section className="home-hero">
     <div className="home-hero-content">
-      <div className="home-hero-icons">
-        <span className="home-hero-icon">✈️</span>
-        <span className="home-hero-icon">🗺️</span>
-        <span className="home-hero-icon">🏛️</span>
-      </div>
 
       <div className="home-hero-text">
-  <h2>Where are you traveling next?</h2>
-  <p>Tell us your city, pace and travel style — we'll build <strong>a travel plan that evolves with your journey.</strong></p>
-  <ul className="hero-highlights">
-    <li>✨ No static itineraries — fully adaptive based on real progress</li>
-    <li>🚶 Smart route optimised by area, distance & energy</li>
-    <li>🔁 Ideal for both first-time and return visits</li>
+  <div className="brand-row">
+    <img src="/orbitrip-symbol.png" alt="ORBITRIP logo" />
+    <h2>ORBITRIP</h2>
+  </div>
+
+<p className="hero-tagline">
+  <strong>Your Journey in Motion</strong>
+</p>
+
+<p className="hero-subtitle">
+  Smart Adaptive AI Travel Planner
+</p>
+
+<p>
+  Tell us your city and travel style — we'll build
+  <strong> a plan that adapts around you.</strong>
+</p>
+
+<ul className="hero-highlights">
+    <li><span className="bullet-sky">✦</span> Adaptive itineraries based on real progress</li>
+
+<li><span className="bullet-blue">✦</span> Smart route planning</li>
+
+<li><span className="bullet-violet">✦</span> Updates when plans change</li>
   </ul>
 </div>
     </div>
@@ -886,11 +899,12 @@ function getFakeWeatherForDay(day: DayItinerary, city: string): FakeWeather {
   </div>
 </header>
 
-{/* 👇 SPOSTATA QUI (e con stile più grande) */}
+
 <p className="hint highlight-hint">
-  💡 For each day, tick the POIs you actually visited. Then, at the bottom of the page,
-  press <strong>"Update itinerary with missed places"</strong> to reshuffle
-  missed stops into later days, based on the parameters you selected.
+  💡 <strong>How it works:</strong><br />
+  ✔ Tick the places you visited today<br />
+  🔄 Press <strong>Update itinerary</strong><br />
+  ✨ ORBITRIP reschedules missed places into the next days based on your travel preferences
 </p>
 
 

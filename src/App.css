@@ -32,14 +32,13 @@
 /* 🌍 Homepage hero section */
 .home-hero {
   position: relative;
-  border-radius: 1.25rem;     /* nice balance */
+  border-radius: 1.25rem;
   overflow: hidden;
-  min-height: 320px;          /* midway between 260 and 400 */
+  min-height: 320px;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  background: linear-gradient(135deg, #ffe1c4, #fff7e9, #e4f0ff);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.10);
+  background: linear-gradient(135deg, #F8FAFC, #EEF4FF, #F5F3FF);
 }
-
 
 .home-hero-content {
   position: relative;
@@ -50,51 +49,98 @@
   padding: 2rem;
 }
 
-.home-hero-icons {
+.brand-row {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  font-size: 2.5rem;
-}
-
-.home-hero-icon {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  gap: 1rem;
+  margin-bottom: 0.4rem;
 }
 
-.home-hero-text {
-  color: #222;
-  max-width: 450px;
+.brand-row img {
+  width: 90px;
+  gap: 1.2rem;
+  height: auto;
+  display: block;
 }
 
 .home-hero-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+  color: #0F172A;
+  letter-spacing: 0.05em;
 }
 
 .home-hero-text p {
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.95rem;
+  color: #334155;
+  line-height: 1.6;
 }
 
+.home-hero-text .hero-tagline {
+  font-size: 1.35rem;
+  color: #2563EB;
+  font-weight: 700;
+  margin-top: -0.2rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.home-hero-text .hero-subtitle {
+  font-size: 0.82rem;
+  color: #64748B;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.hero-tagline {
+  font-size: 1.35rem;
+  color: #2563EB;
+  font-weight: 700;
+  margin-top: -0.2rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-subtitle {
+  font-size: 0.82rem;
+  color: #64748B;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
 
 .hero-highlights {
   list-style: none;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   padding: 0;
 }
 
 .hero-highlights li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.55rem;
+  color: #334155;
+  font-size: 1rem;
 }
 
+.bullet-sky {
+  color: #0EA5E9;
+  font-weight: 700;
+  margin-right: 0.45rem;
+}
+
+.bullet-blue {
+  color: #2563EB;
+  font-weight: 700;
+  margin-right: 0.45rem;
+}
+
+.bullet-violet {
+  color: #7C3AED;
+  font-weight: 700;
+  margin-right: 0.45rem;
+}
 
 .form-grid {
   display: grid;
@@ -127,19 +173,28 @@ select {
 .update-actions {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* 👈 bottone a sinistra */
+  align-items: flex-start;  
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
 
+.update-actions .hint {
+  font-size: 1rem;
+  color: #64748B;
+  font-weight: 500;
+  line-height: 1.5;
+}
 
 button {
   border-radius: 999px;
   border: none;
-  padding: 0.5rem 1rem;
-  background: #d47443;
+  padding: 0.55rem 1.1rem;
+  background: linear-gradient(135deg, #0EA5E9, #2563EB, #7C3AED);
   color: white;
   cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.18);
+  transition: all 0.2s ease;
 }
 
 button[disabled] {
@@ -148,7 +203,9 @@ button[disabled] {
 }
 
 button:hover:not([disabled]) {
-  background: #c0673a;
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #1E40AF, #2563EB, #6D28D9);
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.24);
 }
 
 .poi-list {
@@ -242,11 +299,17 @@ button:hover:not([disabled]) {
 }
 
 .highlight-hint {
-  font-size: 1rem;         /* più grande */
-  font-weight: 500;        /* leggermente più accentuato */
-  color: #444;             /* più visibile di #777 */
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.65;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+
+  background: #EEF4FF;
+  border-left: 4px solid #6366F1;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
 }
 
 .day-list {
